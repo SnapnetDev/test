@@ -1,0 +1,17 @@
+<table>
+	<tr>
+        <th>S/N</th>
+        <th>Category</th>
+		<th>Question</th>
+		<th>Option1</th>
+		<th>Score1</th>
+		<th>Option2</th>
+		<th>Score2</th>
+		<th>Option3</th>
+		<th>Score3</th>
+		<th>Option4</th>
+		<th>Score4</th>
+		<th>Option5</th>
+		<th>Score5</th>
+	</tr>
+</table>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>1011605781962391</id>
+  <author>Microsoft.VisualStudio.Services.TFS</author>
+  <deployer>VSTS</deployer>
+  <authorEmail />
+  <message>{"type":"Install Extensions","commitId":"6a010756c32ef2a2f2c0726360f7c2013a0ac1dd","buildId":"103","releaseId":"101","buildNumber":"20201119.2","releaseName":"Release-101","repoProvider":"GitHub","repoName":"SnapnetDev/hcmpal","collectionUrl":"https://obiakotobe.visualstudio.com/","teamProject":"e56daeab-6e78-4256-a55b-589f53b80c22"}</message>
+  <progress />
+  <status>Success</status>
+  <statusText />
+  <lastSuccessEndTime>2020-11-19T10:32:42.9529296Z</lastSuccessEndTime>
+  <receivedTime>2020-11-19T10:32:42.9529296Z</receivedTime>
+  <startTime>2020-11-19T10:32:42.9529296Z</startTime>
+  <endTime>2020-11-19T10:32:42.9529296Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>True</is_readonly>
+</deployment>

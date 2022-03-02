@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>991605016763829</id>
+  <author>Microsoft.VisualStudio.Services.TFS</author>
+  <deployer>VSTS</deployer>
+  <authorEmail />
+  <message>{"type":"Deployment","commitId":"40bab5aca11826373d3fc56cb6c634b609956474","buildId":"101","releaseId":"99","buildNumber":"20201110.4","releaseName":"Release-99","repoProvider":"GitHub","repoName":"SnapnetDev/hcmpal","collectionUrl":"https://obiakotobe.visualstudio.com/","teamProject":"e56daeab-6e78-4256-a55b-589f53b80c22","buildProjectUrl":"https://obiakotobe.visualstudio.com/e56daeab-6e78-4256-a55b-589f53b80c22","repositoryUrl":"","branch":"novahcm","teamProjectName":"MyFirstProject","slotName":"production"}</message>
+  <progress />
+  <status>Success</status>
+  <statusText />
+  <lastSuccessEndTime>2020-11-10T13:59:24.2214102Z</lastSuccessEndTime>
+  <receivedTime>2020-11-10T13:59:24.2214102Z</receivedTime>
+  <startTime>2020-11-10T13:59:24.2214102Z</startTime>
+  <endTime>2020-11-10T13:59:24.2214102Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>True</is_readonly>
+</deployment>

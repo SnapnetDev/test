@@ -1,0 +1,82 @@
+<html>
+<head></head>
+<body>
+<div class="col-md-10">
+    <div class="row">
+        <div class="col-md-6">
+            <h5  ><b>{{_t('Employee Name')}}:</b></h5>
+            <input style="width:200px;" type="text" {{$disable2}} id="sempname" class="form-control" value="{{strtoupper($employeedata->name)}}"  >
+        </div>
+        <div class="col-md-6">
+            <h5  ><b>{{_t('File No.')}}:</b></h5>
+            <input {{$disable2}} type='text' class="form-control" style="width:200px;" value="{{strtoupper($employeedata->emp_num)}}" id="sempid" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h5  ><b>{{_t('Field Office.')}}:</b></h5>
+            <select id="fieldOffice_id" {{$disable2}} class="form-control">
+
+                @if(isset($employeedata->fieldOffice->name))
+                    <option selected value="{{$employeedata->field_office_id}}">{{$employeedata->fieldOffice->name}}</option>
+                @else
+                    <option value="">-Select Field Office-</option>
+                @endif
+
+            </select>
+        </div>
+        <div class="col-md-6">
+            <h5  ><b>{{_t('Department.')}}:</b></h5>
+            <select data-value="{{ $employeedata->workdept_id }}" id="workdept_id" class="form-control" name="workdept_id" style="width:200px;" required="">
+                <option value="">--Select Department--</option>
+                @foreach ($departments->where('type','dept') as $department)
+
+                    <option value="{{ $department->id }}">{{ $department->spec }}</option>
+
+                @endforeach
+
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h5  ><b>{{_t('Last Promoted.')}}:</b></h5>
+            <input data-plugin="datepicker" type="text" {{$disable2}} class="form-control" value="{{$employeedata->last_promoted}}" id="slastprom" data-format="yyyy-mm-dd" >
+        </div>
+        <div class="col-md-6">
+            <h5  ><b>{{_t('Grade.')}}:</b></h5>
+            <input type="number" {{$disable2}} class="form-control" value="{{$employeedata->rank?$employeedata->rank->grade->level:'Not Assigned'}}"  id="grade" disabled >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h5  ><b>{{_t('Cadre.')}}:</b></h5>
+            <select  id="cadre_id" class="form-control" name="cadre_id"  required="">
+
+                @foreach ($cadres as $cadre)
+
+                    <option value="{{ $cadre->id }}" {{$employeedata->cadre->id==$cadre->id?'selected':''}}>{{ $cadre->name }}</option>
+
+                @endforeach
+
+            </select>
+        </div>
+        <div class="col-md-6">
+            <h5  ><b>{{_t('Rank.')}}:</b></h5>
+            <select  id="rank_id" class="form-control" name="rank_id"  required="">
+                @if($employeedata->cadre)
+                    @foreach($employeedata->cadre->ranks as $rank)
+                        <option value="{{ $rank->id }}" {{$employeedata->rank->id==$rank->id?'selected':''}}>{{ $rank->name }}</option>
+                    @endforeach
+                @else
+                    <option>Select Cadre First</option>
+                @endif
+
+
+
+            </select>
+        </div>
+    </div>
+</div>
+</body>
+</html>

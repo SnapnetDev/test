@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.loader_load-container {
+  height: Auto;
+  width: 90%;
+  font-family: Helvetica;
+}
+
+.loader_load {
+  height: 200px;
+  width: 700px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 48px;
+  text-align: center;
+}
+.progress-dot{
+	animation-name: progressr;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  border: 2px solid white;
+}
+.loader_load--dot {
+  animation-name: loader_load;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  border: 2px solid white;
+}
+
+#hcmlogo{
+animation-name: logo;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+   animation-delay: 0s;
+}
+.progress-dot:first-child {
+  background-color: #8cc759;
+  animation-delay: 1.5s;
+}
+.progress-dot:nth-child(2) {
+  background-color: #8c6daf;
+  animation-delay: 1.45s;
+}
+.progress-dot:nth-child(3) {
+  background-color: #ef5d74;
+  animation-delay: 1.4s;
+}
+.progress-dot:nth-child(4) {
+  background-color: #f9a74b;
+  animation-delay: 1.35s;
+}
+.progress-dot:nth-child(5) {
+  background-color: #60beeb;
+  animation-delay: 1.3s;
+}
+.progress-dot:nth-child(6) {
+  background-color: #fbef5a;
+  animation-delay: 1.25s;
+}
+  .progress-dot:nth-child(7) {
+  background-color: #ef5d74;
+  animation-delay: 1.2s;
+}
+.progress-dot:nth-child(8) {
+  background-color: #f9a74b;
+  animation-delay: 1.15s;
+}
+.progress-dot:nth-child(9) {
+  background-color: #60beeb;
+  animation-delay: 1.10s;
+}
+.progress-dot:nth-child(10) {
+  background-color: #fbef5a;
+  animation-delay: 1.05s;
+}
+.loader_load--text {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+}
+.loader_load--text:after {
+  content: "Please wait while we setup the system for you";
+  font-weight: bold;
+  animation-name: loading-text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes progressr {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(650px);
+  }
+  65% {
+    transform: translateX(650px);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+@keyframes loading-text {
+  0% {
+    content: "Please wait while we setup the system for you";
+  }
+  25% {
+    content: "Please wait while we setup the system for you.";
+  }
+  50% {
+    content: "Please wait while we setup the system for you..";
+  }
+  75% {
+    content: "Please wait while we setup the system for you...";
+  }
+}
+@keyframes logo {
+  15% {
+    transform: translateY(-50px);
+
+  }
+  35% {
+
+    transform: translateY(-100px);
+  }
+
+  65% {
+  	transform: translateY(0px);
+
+  }
+  95% {
+    transform: translateY(0px);
+  }
+}
+
+	</style>
+</head>
+<body>
+<div class='loader_load-container'>
+
+  <div class='loader_load'>
+  	<img src="hcm.png" id="hcmlogo">
+  	<div class="progress-dot" style="background: red;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: green;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: blue;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: purple;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: teal;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: red;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: green;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: blue;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: purple;width: 20px;height:20px;"></div>
+  	<div class="progress-dot" style="background: teal;width: 20px;height:20px;"></div>
+
+    <div class='loader_load--text'></div>
+  </div>
+</div>
+
+</body>
+</html>
